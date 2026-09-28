@@ -35,7 +35,7 @@
 
 <div
 	bind:this={box}
-	class="log mb-5 max-h-[230px] overflow-auto rounded-2xl border border-[var(--line)] bg-white/[.04] px-[18px] py-3.5"
+	class="log mb-5 max-h-[230px] overflow-auto rounded-2xl px-[18px] py-3.5"
 	aria-live="polite"
 >
 	{#each shown as [text, cls], i (i)}
@@ -44,7 +44,9 @@
 </div>
 
 <style>
+	/* The scan log stays a dark terminal block on the light page. */
 	.log {
+		background: #1d1d1f;
 		color: #cbd5e1;
 		font: 12.5px/1.7 var(--mono);
 	}
@@ -52,12 +54,12 @@
 		color: #64748b;
 	}
 	.okc {
-		color: var(--green-400);
+		color: #4ade80;
 	}
 	.wc {
-		color: var(--amber-400);
+		color: #fbbf24;
 	}
 	.bc {
-		color: var(--red-400);
+		color: #f87171;
 	}
 </style>

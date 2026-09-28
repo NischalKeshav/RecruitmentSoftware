@@ -1,30 +1,32 @@
 @import 'tailwindcss';
 
 :root {
-	color-scheme: dark;
-	--bg: #000;
-	--ink: #fff;
-	--ink-2: rgba(255, 255, 255, 0.9);
-	--ink-3: #86868b;
-	--ink-4: #94928d;
-	--glass-a: rgba(255, 255, 255, 0.05);
-	--glass-b: rgba(255, 255, 255, 0.1);
-	--line: rgba(255, 255, 255, 0.1);
-	--blue: #2997ff;
-	--blue-400: #60a5fa;
-	--purple-400: #c084fc;
-	--green-400: #4ade80;
-	--amber-400: #fbbf24;
-	--red-400: #f87171;
-	--teal-400: #2dd4bf;
+	color-scheme: light;
+	--bg: #f5f5f7;
+	--ink: #1d1d1f;
+	--ink-2: rgba(29, 29, 31, 0.88);
+	--ink-3: #6e6e73;
+	--ink-4: #86868b;
+	--sunk: rgba(0, 0, 0, 0.04); /* subtle fills inside cards */
+	--glass-a: rgba(255, 255, 255, 0.72);
+	--glass-b: rgba(255, 255, 255, 0.96);
+	--line: rgba(0, 0, 0, 0.1);
+	--nav-bg: rgba(245, 245, 247, 0.85);
+	--blue: #0066cc;
+	--blue-400: #2563eb;
+	--purple-400: #7c3aed;
+	--green-400: #16a34a;
+	--amber-400: #d97706;
+	--red-400: #dc2626;
+	--teal-400: #0d9488;
 	--ok: var(--green-400);
-	--ok-bg: rgba(74, 222, 128, 0.12);
+	--ok-bg: rgba(22, 163, 74, 0.12);
 	--warn: var(--amber-400);
-	--warn-bg: rgba(251, 191, 36, 0.12);
+	--warn-bg: rgba(217, 119, 6, 0.12);
 	--bad: var(--red-400);
-	--bad-bg: rgba(248, 113, 113, 0.12);
-	--na: #a1a1aa;
-	--na-bg: rgba(161, 161, 170, 0.12);
+	--bad-bg: rgba(220, 38, 38, 0.12);
+	--na: #52525b;
+	--na-bg: rgba(82, 82, 91, 0.12);
 	--sans:
 		-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', ui-sans-serif, system-ui,
 		sans-serif;
@@ -78,27 +80,28 @@ h3 {
 
 /* gradient text, as on the reference site */
 .grad {
-	background: linear-gradient(to right, #fff, #dbeafe, #f3e8ff);
+	background: linear-gradient(to right, var(--ink), #1e40af, #6d28d9);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 }
 .grad-green {
-	background-image: linear-gradient(to right, #fff, #dcfce7, #bbf7d0);
+	background-image: linear-gradient(to right, var(--ink), #15803d, #0f766e);
 }
 .grad-amber {
-	background-image: linear-gradient(to right, #fff, #fef3c7, #fed7aa);
+	background-image: linear-gradient(to right, var(--ink), #b45309, #c2410c);
 }
 .grad-pink {
-	background-image: linear-gradient(to right, #fff, #fce7f3, #e9d5ff);
+	background-image: linear-gradient(to right, var(--ink), #be185d, #6d28d9);
 }
 
 /* frosted card */
 .glass {
 	background: linear-gradient(to right, var(--glass-a), var(--glass-b));
 	backdrop-filter: blur(4px);
+	border: 1px solid var(--line);
 	border-radius: 16px;
-	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
 	padding: 28px;
 }
 @media (min-width: 768px) {
@@ -118,7 +121,7 @@ h3 {
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.1);
+	background: var(--sunk);
 	display: grid;
 	place-items: center;
 	flex: none;
@@ -154,7 +157,7 @@ h3 {
 .btn {
 	border: 0;
 	background: var(--ink);
-	color: #000;
+	color: #fff;
 	font: 600 15px var(--sans);
 	padding: 12px 22px;
 	border-radius: 999px;

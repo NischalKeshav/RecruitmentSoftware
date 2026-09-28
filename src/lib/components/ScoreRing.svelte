@@ -16,11 +16,11 @@
 >
 	<defs>
 		<linearGradient id="ring-grad" x1="0" x2="1">
-			<stop offset="0" stop-color="#60a5fa" />
-			<stop offset="1" stop-color="#c084fc" />
+			<stop offset="0" stop-color="#2563eb" />
+			<stop offset="1" stop-color="#7c3aed" />
 		</linearGradient>
 	</defs>
-	<circle cx="38" cy="38" {r} fill="none" stroke="rgba(255,255,255,.08)" stroke-width="7" />
+	<circle cx="38" cy="38" {r} fill="none" stroke="rgba(0,0,0,.08)" stroke-width="7" />
 	<circle
 		cx="38"
 		cy="38"
@@ -33,7 +33,7 @@
 		stroke-dashoffset={offset.toFixed(1)}
 		transform="rotate(-90 38 38)"
 	/>
-	<text x="38" y="45" text-anchor="middle" fill="#fff" style="font:700 20px var(--sans)"
+	<text x="38" y="45" text-anchor="middle" fill="var(--ink)" style="font:700 20px var(--sans)"
 		>{score}</text
 	>
 </svg>

@@ -65,7 +65,8 @@
 			<span class="eyebrow">Sources linked</span>
 			<span class="text-sm">{d.ids}</span>
 			<span class="muted text-sm"
-				>Identity match across sources: <b class="text-white tabular-nums">{d.match}</b></span
+				>Identity match across sources: <b class="text-[var(--ink)] tabular-nums">{d.match}</b
+				></span
 			>
 		</div>
 
@@ -249,7 +250,7 @@
 		display: grid;
 		place-items: center;
 		font: 700 18px var(--sans);
-		color: #000;
+		color: #fff;
 		flex: none;
 	}
 	.kv {
@@ -270,7 +271,7 @@
 		gap: 10px;
 	}
 	.tally div {
-		background: rgba(255, 255, 255, 0.05);
+		background: var(--sunk);
 		border-radius: 12px;
 		padding: 10px 12px;
 		display: flex;
@@ -285,7 +286,7 @@
 		font: 500 11px var(--mono);
 		padding: 4px 8px;
 		border-radius: 6px;
-		background: rgba(255, 255, 255, 0.08);
+		background: rgba(0, 0, 0, 0.06);
 		color: var(--ink-2);
 	}
 	.panel-head {
@@ -318,7 +319,7 @@
 	}
 	.ev {
 		grid-column: 1 / -1;
-		background: rgba(255, 255, 255, 0.04);
+		background: var(--sunk);
 		border-radius: 12px;
 		padding: 12px 14px;
 		font-size: 14px;
@@ -345,7 +346,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
 	}
 	.repo {
-		background: rgba(255, 255, 255, 0.04);
+		background: var(--sunk);
 		border-radius: 12px;
 		padding: 14px;
 		display: flex;
@@ -357,13 +358,13 @@
 		height: 6px;
 		border-radius: 3px;
 		overflow: hidden;
-		background: rgba(255, 255, 255, 0.06);
+		background: rgba(0, 0, 0, 0.08);
 	}
 	.hidden-skills {
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
 	}
 	.hs {
-		border: 1px dashed rgba(255, 255, 255, 0.18);
+		border: 1px dashed rgba(0, 0, 0, 0.2);
 		border-radius: 12px;
 		padding: 14px;
 		display: flex;
@@ -398,8 +399,8 @@
 	}
 	.redact s {
 		font: 12px var(--mono);
-		background: #fff;
-		color: #fff;
+		background: var(--ink);
+		color: var(--ink);
 		border-radius: 4px;
 		padding: 2px 8px;
 		text-decoration: none;

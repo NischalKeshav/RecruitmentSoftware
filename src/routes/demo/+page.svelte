@@ -35,7 +35,7 @@
 			{#each Object.entries(CANDIDATES) as [key, c] (key)}
 				<button
 					type="button"
-					class="seg flex flex-col gap-0.5 rounded-[14px] px-[18px] py-3 text-left text-[15px] font-semibold text-white"
+					class="seg flex flex-col gap-0.5 rounded-[14px] px-[18px] py-3 text-left text-[15px] font-semibold text-[var(--ink)]"
 					aria-pressed={key === current}
 					onclick={() => pick(key)}
 				>
@@ -55,9 +55,10 @@
 <style>
 	.seg {
 		background: linear-gradient(to right, var(--glass-a), var(--glass-b));
+		border: 1px solid var(--line);
 		transition: box-shadow 0.2s;
 	}
 	.seg[aria-pressed='true'] {
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+		box-shadow: inset 0 0 0 1px var(--ink);
 	}
 </style>

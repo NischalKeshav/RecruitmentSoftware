@@ -163,7 +163,10 @@
 			</thead>
 			<tbody>
 				{#each tools as [tool, strength, relevance] (tool)}
-					<tr><td><b class="text-white">{tool}</b></td><td>{strength}</td><td>{relevance}</td></tr>
+					<tr
+						><td><b class="text-[var(--ink)]">{tool}</b></td><td>{strength}</td><td>{relevance}</td
+						></tr
+					>
 				{/each}
 			</tbody>
 		</table>
@@ -171,7 +174,7 @@
 	<div class="glass gap mt-5" use:reveal>
 		<span class="eyebrow" style="color:var(--purple-400)">The gap</span>
 		<p class="mt-2.5 text-lg text-[var(--ink-2)]">
-			<b class="text-white"
+			<b class="text-[var(--ink)]"
 				>No tool on either list verifies claims or finds skills a resume leaves out.</b
 			>
 			They manage candidates and hand off to outside vendors for tests and background checks. A claim
@@ -381,12 +384,12 @@
 		border-bottom: 0;
 	}
 	.gap {
-		border: 1px solid rgba(192, 132, 252, 0.35);
-		background: linear-gradient(to right, rgba(96, 165, 250, 0.08), rgba(192, 132, 252, 0.12));
+		border: 1px solid rgba(124, 58, 237, 0.35);
+		background: linear-gradient(to right, rgba(37, 99, 235, 0.06), rgba(124, 58, 237, 0.1));
 	}
 	.step.hl {
 		box-shadow:
-			inset 0 0 0 1px rgba(96, 165, 250, 0.5),
-			0 0 60px -20px rgba(96, 165, 250, 0.6);
+			inset 0 0 0 1px rgba(37, 99, 235, 0.5),
+			0 0 60px -20px rgba(37, 99, 235, 0.5);
 	}
 </style>

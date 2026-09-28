@@ -7,11 +7,13 @@
 	];
 </script>
 
-<header class="fixed inset-x-0 top-0 z-50 bg-black/95 backdrop-blur-md">
+<header
+	class="fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[var(--nav-bg)] backdrop-blur-md"
+>
 	<nav class="wrap flex items-center justify-between gap-4 py-[18px]" aria-label="Main">
 		<a
 			href="/"
-			class="flex flex-1 items-center gap-2.5 text-sm font-semibold text-white no-underline"
+			class="flex flex-1 items-center gap-2.5 text-sm font-semibold text-[var(--ink)] no-underline"
 		>
 			<svg
 				width="24"
@@ -19,7 +21,7 @@
 				viewBox="0 0 24 24"
 				aria-hidden="true"
 				fill="none"
-				stroke="#fff"
+				stroke="currentColor"
 				stroke-width="1.5"
 				stroke-linecap="round"
 			>
@@ -34,7 +36,7 @@
 			{#each links as { href, label } (href)}
 				<a
 					{href}
-					class="rounded-full px-3.5 py-1.5 text-sm text-[var(--ink-3)] no-underline transition-colors hover:text-white aria-[current=page]:text-white"
+					class="rounded-full px-3.5 py-1.5 text-sm text-[var(--ink-3)] no-underline transition-colors hover:text-[var(--ink)] aria-[current=page]:text-[var(--ink)]"
 					aria-current={page.url.pathname === href ? 'page' : undefined}
 				>
 					{label}

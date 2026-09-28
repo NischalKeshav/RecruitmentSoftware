@@ -21,7 +21,7 @@
 		'Sep'
 	];
 	const days = ['Mon', 'Wed', 'Fri'];
-	const heat = ['rgba(255,255,255,.06)', '#1f3355', '#2f5ea8', '#6d7ff0', '#c084fc'];
+	const heat = ['rgba(0,0,0,.06)', '#bfdbfe', '#60a5fa', '#2563eb', '#6d28d9'];
 
 	// Deterministic sample activity so the same candidate always renders the same map.
 	let cells = $derived.by(() => {
@@ -56,7 +56,7 @@
 			<text
 				x={28 + i * (cols / 12) * (cell + gap)}
 				y="10"
-				fill="#86868b"
+				fill="var(--ink-3)"
 				style="font:10px var(--mono)">{m}</text
 			>
 		{/each}
@@ -64,7 +64,7 @@
 			<text
 				x="0"
 				y={22 + (1 + i * 2) * (cell + gap) + 9}
-				fill="#86868b"
+				fill="var(--ink-3)"
 				style="font:10px var(--mono)">{d}</text
 			>
 		{/each}

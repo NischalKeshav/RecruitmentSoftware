@@ -9,7 +9,7 @@
 		const ctx = canvas.getContext('2d');
 		if (!ctx) return;
 		const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-		const colors = ['96,165,250', '192,132,252', '45,212,191'];
+		const colors = ['37,99,235', '124,58,237', '13,148,136'];
 		const pts = Array.from({ length: 320 }, () => {
 			const u = Math.random() * 2 - 1;
 			const t = Math.random() * Math.PI * 2;
@@ -43,9 +43,9 @@
 			ctx.clearRect(0, 0, W, W);
 
 			const g = ctx.createRadialGradient(c, c, 0, c, c, R * 0.42);
-			g.addColorStop(0, 'rgba(167,139,250,.95)');
-			g.addColorStop(0.55, 'rgba(124,58,237,.55)');
-			g.addColorStop(1, 'rgba(124,58,237,0)');
+			g.addColorStop(0, 'rgba(139,92,246,.9)');
+			g.addColorStop(0.55, 'rgba(167,139,250,.45)');
+			g.addColorStop(1, 'rgba(167,139,250,0)');
 			ctx.fillStyle = g;
 			ctx.beginPath();
 			ctx.arc(c, c, R * 0.42, 0, Math.PI * 2);
